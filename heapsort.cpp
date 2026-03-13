@@ -1,7 +1,7 @@
 // simple C++ program to read in an array of longs, sort
 // the array using heapsort, and then write the sorted data
 // to a file
-// By Mary Elaine Califf and Joshua O'Neill
+//Joshua O'Neill
 
 #include <fstream>
 #include <iostream>
@@ -18,13 +18,11 @@ void writeFile(const vector<long>& arr, char* fileName);
 // sort the vector using heapsort (data starts at index 1)
 void heapsort(vector<long>& arr);
 
-// add any function prototypes for any additional functions here
 
 void buildMaxHeap(vector<long>& arr);
 
 void heapify(vector<long>& arr, int size, int index);
 
-// do not modify the main function -- you must complete the empty methods below
 int main(int argc, char** argv) {
 
   if (argc < 3) {
@@ -63,7 +61,6 @@ void readFile(vector<long>& arr, char* fileName)
 //writes the sorted longs to a file
 void writeFile(const vector<long>& arr, char* fileName)
 {
-  // your code here
   ofstream outFile(fileName);
   for(int i = 1; i < arr.size(); i++){
     outFile << arr[i] << endl;
@@ -86,7 +83,6 @@ void heapsort(vector<long>& arr)
   }
 }
 
-// implementation code for any additional functions here
   
   //builds max heap and calls heapify for each node
 void buildMaxHeap(vector<long>& arr){
